@@ -5,7 +5,6 @@ This is a passion project, made to test my python knowledge and double feautures
 
 ## How to use 
 - Download the *geometry.py* file
-- Use pip to install the Sympy library
 ``` bash
 pip install sympy
 ```
