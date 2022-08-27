@@ -16,25 +16,32 @@ while forma != 0:
     while forma == 1:
         formula = input('Digite A para área e V para volume: ').lower()
         if formula == 'a':
+            print('~'*10, 'Área Lateral', '~'*10)
+            pb = float(input('Digite o valor do lado base: '))
+            ph = float(input('Digite o valor da altura: '))
+            print('~'*30)
+            al = pb * ph / 2
+
             print('~'*30)
             base = int(input('''
             Escolha a base:
             [ 1 ] QUADRADO
             [ 2 ] RETÂNGULO
             [ 3 ] HEXAGONO
-            [ 4 ] CIRCULO
             '''))
             print('~'*30)
 
             while base == 1:
                 ab = float(input('Digite o valor da aresta: '))
                 ab = ab ** 2
+                al * 4
                 break
 
             while base == 2:
                 b = float(input('Digite o valor da base: '))
                 h = float(input('Digite o valor da altura: '))
                 ab = b * h
+                al * 4
                 break
 
             while base == 3:
@@ -42,21 +49,9 @@ while forma != 0:
                 l = float(input('Digite o valor do lado: '))
                 ra = float(input('Digite o valor da raiz de 3: '))
                 ab = b * (l)**2 * ra / 4
-                break
-
-            while base == 4:
-                pi = float(input('Digite o valor de pi: '))
-                r = float(input('Digite o valor do raio: '))
-                ab = pi * r**2
+                al * 6
                 break
             
-            
-            print('~'*10, 'Área Lateral', '~'*10)
-            pb = float(input('Digite o valor do lado base: '))
-            ph = float(input('Digite o valor da altura: '))
-            print('~'*30)
-            al = pb * ph / 2
-                
             print(''' Esse sólido tem a area da base de valor {} e a area lateral de valor {}.
             O valor da área total é de {}cm'''.format(ab, al, ab + al))
 
