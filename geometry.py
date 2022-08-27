@@ -13,8 +13,9 @@ while forma != 0:
     '''))
     print('~'*30)
 
+    ### PYRAMID ###
     while forma == 1:
-        formula = input('Digite A para área e V para volume: ').lower()
+        formula = input('Digite A para área e V para volume [0 pra voltar]: ').lower()
         if formula == 'a':
             print('~'*10, 'Área Lateral', '~'*10)
             pb = float(input('Digite o valor do lado base: '))
@@ -61,9 +62,12 @@ while forma != 0:
             print('O volume desse sólido é {}cm'.format(ab * h / 3))
             print('~'*30)
             break
-
+        if formula == '0':
+            break
+        
+    ### CONES ###
     while forma == 2:
-        formula = input('Digite A para área e V para volume: ').lower()
+        formula = input('Digite A para área e V para volume [0 pra voltar]: ').lower()
         if formula == 'a':
             pi = float(input('Digite o valor de pi: '))
             r = float(input('Digite o valor do raio: '))
@@ -75,10 +79,14 @@ while forma != 0:
             ab = float(input('Digite o valor da area da base: '))
             h = float(input('Digite o valor da altura: '))
             print('O volume desse sólido é de {}'.format(ab * h / 3))
-        break
-
+            break
+        
+        if formula == '0':
+            break
+        
+    ### CYLINDERS ###
     while forma == 3:
-        formula = input('Digite A para área e V para volume: ').lower()
+        formula = input('Digite A para área e V para volume [0 pra voltar]: ').lower()
         if formula == 'a':
             pi = float(input('Digite o valor de pi: '))
             r = float(input('Digite o valor do raio: '))
@@ -93,10 +101,14 @@ while forma != 0:
             ab = float(input('Digite o valor da area da base: '))
             h = float(input('Digite o valor da altura: '))
             print('O volume desse sólido é de {}'.format(ab * h))
-        break
+            break
     
+        if formula == '0':
+            break
+    
+    ### POLYGONS ###
     while forma == 4:
-        formula = input('Digite A para área e V para volume: ').lower()
+        formula = input('Digite A para área e V para volume [0 pra voltar]: ').lower()
         if formula == 'a':
             print('~'*30)
             base = int(input('''
@@ -169,8 +181,12 @@ while forma != 0:
             print('O volume desse sólido com a area de base {} e altura de {}, é de {}'.format(ab, h, ab * h))
             break
 
+        if formula == '0':
+            break
+        
+    ### SPHERE ###
     while forma == 5: 
-        formula = input('Digite A para área e V para volume: ').lower()
+        formula = input('Digite A para área e V para volume [0 pra voltar]: ').lower()
         print('~'*30)
 
         if formula == 'a':
@@ -184,5 +200,8 @@ while forma != 0:
             pi = float(input('Digite o valor de pi: '))
             r = float(input('Digite o valor do raio: '))
             print('O volume total da esfera é de {}'.format(4 * pi * (r)**3 / 3))
+            break
+        
+        if formula == '0':
             break
 
